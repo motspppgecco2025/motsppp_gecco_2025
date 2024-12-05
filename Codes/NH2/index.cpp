@@ -395,13 +395,10 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions)
             double M = 10000;
             double epsilon = 0.1;
 
-            // +----------------------+
-            // + Variáveis de decisão +
-            // +----------------------+
             
             vector<vector<GRBVar>> x(n, vector<GRBVar>(n));
             vector<GRBVar> u(n);
-            vector<vector<GRBVar>> y(solutions.size(), vector<GRBVar>(2)); // Ajuste o tamanho conforme necessário
+            vector<vector<GRBVar>> y(solutions.size(), vector<GRBVar>(2)); 
 
             for (int i = 0; i < n; i++) {
                 u[i] = model.addVar(2.0, n, 0.0, GRB_INTEGER, "u_" + to_string(i));
@@ -419,9 +416,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions)
             }
 
 
-            // +-----------------+
-            // + Funcao objetivo +
-            // +-----------------+
             GRBLinExpr obj1 = 0;
             GRBLinExpr obj2 = 0;
             for (int i = 0; i < n; i++) {
@@ -433,16 +427,9 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions)
                 }
             }
 
-            // => funcao objetiva do algoritmo 2 de lokman e koksalan
-            // Função objetivo composta para minimização
             model.setObjective(obj2 + (epsilon * obj1), GRB_MINIMIZE);
 
 
-            // +------------------------+
-            // + Restrições do problema +
-            // +------------------------+
-
-            // Cada cidade deve ser visitada exatamente uma vez (exceto a cidade inicial)
             for (int i = 0; i < n; i++) {
                 GRBLinExpr expr_in = 0;
                 GRBLinExpr expr_out = 0;
@@ -456,7 +443,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions)
                 model.addConstr(expr_out == 1, "out_" + to_string(i));
             }
 
-            // Restrição de eliminação de subtours (MTZ)
             for (int i = 1; i < n ; i++) {
                 for (int j = 1; j < n; j++) {
                     if (i != j) {
@@ -466,11 +452,9 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions)
             }
 
 
-            // => restricoes (1) e (2) do algoritmo 2 de lokman e koksalan
-            // Implementar as restrições do modelo composto
             for (int t = 0; t < solutions.size(); t++) {
                 for (int j = 0; j < 2; j++) {
-                    if (j != 1) { // Supondo que 'm' seja 1
+                    if (j != 1) {
                         model.addConstr(obj1 <= (solutions[t].obj1 - 1) * y[t][j] - 1, "comp1_" + to_string(t) + "_" + to_string(j));
                     }
                 }
@@ -479,7 +463,7 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions)
             for (int t = 0; t < solutions.size(); t++) {
                 GRBLinExpr sumY = 0;
                 for (int j = 0; j < 2; j++) {
-                    if (j != 1) { // Supondo que 'm' seja 1
+                    if (j != 1) { 
                         sumY += y[t][j];
                     }
                 }
@@ -487,10 +471,8 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions)
             }
 
 
-            // Resolver o modelo
             model.optimize();
             
-            // Verificar viabilidade e ignorar se o tempo foi excedido
             if (model.get(GRB_IntAttr_Status) == GRB_OPTIMAL && !cb.stop_optimization) {
                 Solution newSolution = {obj1.getValue(), obj2.getValue(), extractTour(model, x, n)};
                 solutions.push_back(newSolution);
@@ -544,7 +526,6 @@ void filterDominatedSolutions(vector<Solution> &solutions) {
     solutions = nonDominatedSolutions;
 }
 
-// Função principal para o algoritmo
 int main() {
     vector<string> typeInstancies = { "asymmetric", "symmetric" };
 
@@ -582,13 +563,11 @@ int main() {
 
             solveModel(env, data, solutions);
 
-            // Adicionar coleta de bônus e passageiros para cada solução encontrada
             for (int i = 0; i < solutions.size(); ++i) {
                 rideMatchingHeuristic(data, solutions[i]);
                 collectBonuses(data, solutions[i]);
             }
 
-            // Filtrar soluções dominadas
             filterDominatedSolutions(solutions);
 
             auto end_time = chrono::high_resolution_clock::now();
@@ -599,7 +578,6 @@ int main() {
             }
 
 
-            // Escrever resultados em solutions.txt
             ofstream outFile(path_output + file_name_output);
             if (outFile.is_open()) {
                 outFile << "Fo(custo)\tFo(tempo)\tFo(bônus)\n";

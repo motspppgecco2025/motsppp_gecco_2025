@@ -14,7 +14,6 @@ using namespace std;
 
 int s_initial = 0;
 
-// Classe de callback para limitar o tempo de execução
 class TimeLimitCallback : public GRBCallback {
 public:
     std::chrono::steady_clock::time_point start_time;
@@ -33,31 +32,30 @@ protected:
 
             if (elapsed_seconds.count() >= time_limit_seconds) {
                 stop_optimization = true;
-                abort();  // Interrompe a otimização
+                abort();
             }
         }
     }
 };
 
 struct Passenger {
-    int wk;  // Contribuição do passageiro
-    int ok;  // Cidade de origem do passageiro
-    int dk;  // Cidade de destino do passageiro
-    int tk;  // Tempo máximo da rota do passageiro
+    int wk;
+    int ok;
+    int dk;
+    int tk;
 };
 
 struct InputData {
-    int n;                  // Número de cidades
-    int l;                  // Número de passageiros
-    int vehicle_capacity;   // Capacidade do veículo
-    vector<vector<int>> c;  // Matriz de custosnObjectives
-    vector<vector<int>> y;  // Matriz de tempo
-    vector<int> b;          // Bônus de cada cidade
-    vector<int> g;          // Tempo de coleta de bônus de cada cidade
-    vector<Passenger> passengers; // Dados dos passageiros
+    int n;         
+    int l;             
+    int vehicle_capacity;   
+    vector<vector<int>> c; 
+    vector<vector<int>> y;  
+    vector<int> b;
+    vector<int> g;
+    vector<Passenger> passengers;
 };
 
-// Estrutura para armazenar os pontos não-dominados
 struct Solution {
     double obj_cost;
     double obj_time;
@@ -67,7 +65,6 @@ struct Solution {
     vector<int> passengers;
 };
 
-// leitura dos dados do 'input.txt'
 InputData readInput(const string &filename) {
     ifstream file(filename);
     InputData data;
@@ -100,7 +97,7 @@ InputData readInput(const string &filename) {
             data.passengers[i] = {wk, ok, dk, tk};
         }
 
-        file >> quota; // não utilizada;
+        file >> quota;
 
         for (int i = 0; i < data.n; i++) {
             int cityIndex, bonus, collectTime;
@@ -117,7 +114,6 @@ InputData readInput(const string &filename) {
     return data;
 }
 
-// Função para extrair o tour da solução com base na variável x
 vector<int> extractTour(GRBModel &model, vector<vector<GRBVar>> &x, int n) {
     vector<int> tour;
 
@@ -130,7 +126,6 @@ vector<int> extractTour(GRBModel &model, vector<vector<GRBVar>> &x, int n) {
         while (tour.size() < n) {
             bool found = false;
             for (int next = 0; next < n; next++) {
-                //if (!visited[next] && x[current][next].get(GRB_DoubleAttr_X) > .5) {
                 if (!visited[next] && fabs(x[current][next].get(GRB_DoubleAttr_X)-1.0) < 0.000001){
                     tour.push_back(next);
                     visited[next] = true;
@@ -140,13 +135,12 @@ vector<int> extractTour(GRBModel &model, vector<vector<GRBVar>> &x, int n) {
                 }
             }
             if (!found) {
-                break; // Não há mais cidades para visitar
+                break;
             }
         }
 
-        // Verifica se o tour retornou ao ponto inicial
         if (current != 0) {
-            tour.push_back(0); // Retorna à cidade inicial
+            tour.push_back(0);
         }
 
     } catch (const GRBException &e) {
@@ -161,7 +155,6 @@ vector<int> extractTour(GRBModel &model, vector<vector<GRBVar>> &x, int n) {
     return tour;
 };
 
-// Função para coletar bônus ao longo do tour
 vector<int> collectBonuses(const vector<int>& tour, const InputData &data, GRBModel &model,  vector<GRBVar> &p) {
     vector<int> collectedBonuses;
 
@@ -183,7 +176,6 @@ vector<int> collectBonuses(const vector<int>& tour, const InputData &data, GRBMo
     return collectedBonuses;
 }
 
-// Função para coletar os passageiros viáveis
 vector<int> collectPassengers(GRBModel &model, vector<vector<vector<GRBVar>>> &h, int n, int m) {
     vector<int> passengers;
 
@@ -212,7 +204,6 @@ vector<int> collectPassengers(GRBModel &model, vector<vector<vector<GRBVar>>> &h
     return passengers;
 }
 
-// Função para salvar os resultados intermediários
 void saveProgress(const vector<Solution> &solutions, const string &path_output, const string &file_name_output) {
     ofstream outFile(path_output + file_name_output);
     if (outFile.is_open()) {
@@ -244,18 +235,17 @@ void saveProgress(const vector<Solution> &solutions, const string &path_output, 
     }
 }
 
-// Função para configurar e resolver o modelo Gurobi
 void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions, string fragment_file) {
     try {
         bool stop = false;
         int count_interaction = 0;
         int count_file = 1;
 
-        int time_limit_seconds = 7200;  // 2 horas em segundos
+        int time_limit_seconds = 7200;
         TimeLimitCallback cb(time_limit_seconds);
         
         auto start_time = std::chrono::steady_clock::now();
-        auto last_save_time = start_time;  // Para controle de 30 minutos
+        auto last_save_time = start_time;
 
         while(!stop) {
             GRBModel model = GRBModel(env);
@@ -272,17 +262,13 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
             cout << epsilon << endl;
             int nObjectives = 3;
 
-            // +----------------------+
-            // + Variáveis de decisão +
-            // +----------------------+
-            
-            vector<vector<GRBVar>> x(n, vector<GRBVar>(n));                                      // Variável binária que indica se a aresta de cidade i para cidade j é percorrida;
-            vector<GRBVar> u(n);                                                                 // Variável inteira que indica a ordem da cidade i na rota do caixeiro viajante, usada nas restrições MTZ para eliminação de subtours
-            vector<GRBVar> p(n);                                                                 // Variável binária que indica se o bônus na cidade i é coletado
-            vector<vector<vector<GRBVar>>> h(m, vector<vector<GRBVar>>(n, vector<GRBVar>(n)));   // Variável binária que indica se o k-ésimo passageiro está no veículo na aresta (i, j)
-            vector<vector<vector<GRBVar>>> psi(n, vector<vector<GRBVar>>(n, vector<GRBVar>(m)));   // Variável continua para linearização das restrições envolvendo alpha // by Felipe 28/08/2024
-            vector<vector<GRBVar>> alpha(n, vector<GRBVar>(n));                                  // Variável contínua que indica o inverso do número de ocupantes do carro na aresta (i, j);
-            vector<vector<GRBVar>> y(solutions.size(), vector<GRBVar>(nObjectives));             // Ajuste o tamanho conforme necessário
+            vector<vector<GRBVar>> x(n, vector<GRBVar>(n));                             
+            vector<GRBVar> u(n);                                                               
+            vector<GRBVar> p(n);                          
+            vector<vector<vector<GRBVar>>> h(m, vector<vector<GRBVar>>(n, vector<GRBVar>(n))); 
+            vector<vector<vector<GRBVar>>> psi(n, vector<vector<GRBVar>>(n, vector<GRBVar>(m))); 
+            vector<vector<GRBVar>> alpha(n, vector<GRBVar>(n));                                
+            vector<vector<GRBVar>> y(solutions.size(), vector<GRBVar>(nObjectives)); 
 
             for (int i = 0; i < n; i++) {
                 p[i] = model.addVar(0.0, 1.0, 0.0, GRB_BINARY, "p_" + to_string(i));
@@ -303,7 +289,7 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                 for (int i = 0; i < n; i++){
                     for (int j = 0; j < n; j++){
                         h[k][i][j] = model.addVar(0.0, 1.0, 0.0, GRB_BINARY, "h_" + to_string(k) + "_" + to_string(i) + "_" + to_string(j));
-                        psi[i][j][k] = model.addVar(0, 1, 0.0, GRB_CONTINUOUS, "psi" + std::to_string(i) + std::to_string(j) + std::to_string(k)); // by Felipe (28/08/2024)
+                        psi[i][j][k] = model.addVar(0, 1, 0.0, GRB_CONTINUOUS, "psi" + std::to_string(i) + std::to_string(j) + std::to_string(k));
 
                     }
                 }
@@ -315,10 +301,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                 }
             }
 
-
-            // +-----------------+
-            // + Funcao objetivo +
-            // +-----------------+
 
             GRBQuadExpr obj_cost = 0;
             GRBLinExpr obj_time  = 0;
@@ -336,11 +318,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
 
             model.setObjective(obj_bonus + (epsilon * obj_cost) + (epsilon * obj_time), GRB_MAXIMIZE);
 
-            
-
-            // +------------------------------+
-            // + Restrições Lokman e Koksalan +
-            // +------------------------------+
 
             for (int t = 0; t < solutions.size(); t++){
                 model.addQConstr(obj_cost >= ((solutions[t].obj_cost + 1) * y[t][0]) - (M * (1 - y[t][0])), "comp1_" + to_string(t) + "_" + to_string(0));
@@ -357,12 +334,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                 model.addConstr(sumY == 1, "compSum_" + to_string(t));
             }
 
-            // +------------------------+
-            // + Restrições do problema +
-            // +------------------------+
-
-            // Restrição 4: Cada cidade, exceto a origem, deve ser visitada exatamente uma vez
-            // Restrição 5: Apenas uma saída de cada cidade
             GRBLinExpr expr4 = 0;
             GRBLinExpr expr5 = 0;
             for (int i = 0; i < n; i++){
@@ -374,8 +345,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
             model.addConstr(expr4 == 1, "visit_" + to_string(s_initial));
             model.addConstr(expr5 == 1, "departure_" + to_string(s_initial));
 
-            // Restrição 6: Cada cidade deve ser visitada no máximo uma vez
-            // Restrição 7: Somatório de entradas na cidade j deve ser no máximo 1
             for (int j = 0; j < n; j++) {
                 if (j != s_initial) {
                     GRBLinExpr expr6 = 0;
@@ -391,7 +360,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                 }
             }
 
-            // Restrição 8: Fluxo de entrada igual ao fluxo de saída
             for (int j = 0; j < n; j++){
                 if (j != s_initial) {
                     GRBLinExpr expr81 = 0;
@@ -406,7 +374,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                 }
             }
 
-            // Restrição 9: Restrições MTZ para eliminação de subtours
             for (int i = 1; i < n; i++) {
                 for (int j = 1; j < n; j++) {
                     if (i != j) {
@@ -415,7 +382,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                 }
             }
 
-            // Restrição 10: Somatório de x <= p para todas as cidades j exceto a cidade de origem
             for (int i = 0; i < n; i++){
                 GRBLinExpr expr10 = 0;
                 for (int j = 0; j < n; j++){
@@ -426,7 +392,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                 model.addConstr(expr10 >= p[i], "max_visits_" + to_string(i));   
             }
 
-            // Restrição 11: Duração máxima do tour para cada passageiro
             for (int k = 0; k < m; k++) {
                 GRBQuadExpr expr11 = 0;
 
@@ -445,7 +410,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                 model.addQConstr(expr11 <= data.passengers[k].tk, "max_tour_duration_passenger_" + to_string(k));
             }
 
-            // Restrição 12: Capacidade do veículo
             for (int i = 0; i < n; i++){
                 for (int j = 0; j < n; j++){
                     if (i != j){
@@ -458,7 +422,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                 }
             }
 
-            //RESTRICAO 19 - LINEARIZADA - CALCULO DA TAXA DE ALPHA
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
                     if (i != j) {
@@ -471,7 +434,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                 }
             }
 
-            //RESTRICAO 13  LINEARIZADA: sum(i ∈ V) sum(j ∈ V - {i}) ((hkij * c) / (1 + sum(e ∈ L (heij))) <= wk para todo k ∈ L
             for (int k = 0; k < m; k++) {
                 GRBLinExpr  expr13 = 0;
                 for (int i = 0; i < n; i++) {
@@ -489,7 +451,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
 
             }
 
-            // Restrição 14: Cada passageiro deve ser deixado na cidade de destino e levado de sua origem:
             for (int k = 0; k < m; k++) {
                 GRBLinExpr expr14 = 0;
                 for (int i = 0; i < n; i++) {
@@ -504,7 +465,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                 model.addConstr(expr14 == 0, "pckup_dropoff_balance_" + to_string(k));
             }
         
-            // Restrição 15: Se um passageiro é transportado de i para j, o veículo deve ir de i para j
             for (int k = 0; k < m; k++){
                 if (data.passengers[k].ok != s_initial) {
                     GRBLinExpr expr15 = 0;
@@ -517,7 +477,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                 }
             }
 
-            // Restrição 16: Fluxo de entrada igual ao fluxo de saída para cada passageiro k em cada cidade i
             for (int k = 0; k < m; k++){
                 for (int i = 0; i < n; i++){
                     if(i != data.passengers[k].ok && i != data.passengers[k].dk) {
@@ -525,8 +484,8 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
                         GRBLinExpr expr162 = 0;
                         for (int j = 0; j < n; j++){
                             if (i != j){
-                                expr161 += h[k][j][i];  // fluxo de entrada
-                                expr162 += h[k][i][j]; // fluxo de saída
+                                expr161 += h[k][j][i];
+                                expr162 += h[k][i][j];
                             }
                         }
                         model.addConstr(expr161 == expr162, "flow_balance_passenger_" + to_string(k) + "_" + to_string(i));
@@ -537,7 +496,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
 
             model.optimize();
             
-           // Verificar viabilidade e ignorar se o tempo foi excedido
             if (model.get(GRB_IntAttr_Status) == GRB_OPTIMAL && !cb.stop_optimization) {
                 cout << "obj_cost: " << obj_cost.getValue() << " obj_time: " << obj_time.getValue() << " obj_bonus: " << obj_bonus.getValue() << endl;
                 cout << endl << endl;
@@ -552,12 +510,11 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
 
                 solutions.push_back(newSolution);
 
-                 // Verificar se passaram 20 minutos para salvar o progresso
                 auto current_time = std::chrono::steady_clock::now();
                 std::chrono::duration<double> elapsed_minutes = current_time - last_save_time;
-                if (elapsed_minutes.count() >= 1200) {  // 20 minutos
+                if (elapsed_minutes.count() >= 1200) {
                     saveProgress(solutions, "./", to_string(count_file) + "_" + fragment_file + "_file_20_min.txt");
-                    last_save_time = current_time;  // Atualiza o último tempo de gravação
+                    last_save_time = current_time; 
                     count_file++;
                 }
 
@@ -579,7 +536,6 @@ void solveModel(GRBEnv &env, const InputData &data, vector<Solution> &solutions,
     }
 }
 
-// Função principal para o algoritmo
 int main() {
     vector<string> typeInstancies = { "asymmetric", "symmetric" };
 
@@ -638,7 +594,6 @@ int main() {
             file_name_output = instance + ".2h.txt";
         }
 
-        // Escrever resultados em solutions.txt
         ofstream outFile(path_output + file_name_output);
         if (outFile.is_open()) {
             outFile << "Fo(custo)\tFo(tempo)\tFo(bônus)\n";
