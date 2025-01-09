@@ -1,0 +1,27 @@
+Fo(cost)	Fo(time)	Fo(bonus)
+
+885	890	2626
+tour: 0 1 4 2 3 0 
+bonus: 1 4 2 3 
+passengers: 
+
+676	909	1218
+tour: 0 4 1 2 3 0 
+bonus: 4 3 
+passengers: 29 34 22 
+
+767	1024	2626
+tour: 0 3 4 2 1 0 
+bonus: 3 4 2 1 
+passengers: 
+
+695	1037	2626
+tour: 0 4 2 3 1 0 
+bonus: 4 2 3 1 
+passengers: 
+
+677	1021	2062
+tour: 0 2 3 4 1 0 
+bonus: 3 4 1 
+passengers: 4 17 
+

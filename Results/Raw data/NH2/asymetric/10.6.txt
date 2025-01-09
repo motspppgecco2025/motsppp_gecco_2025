@@ -1,0 +1,32 @@
+Fo(cost)	Fo(time)	Fo(bonus)
+
+1416	1616	5118
+tour: 0 9 7 1 3 5 2 6 8 4 0 
+bonus: 9 7 1 3 5 2 6 8 4 
+passengers: 27 
+
+1286	1440	1436
+tour: 0 5 2 6 8 9 7 1 3 4 0 
+bonus: 6 3 4 
+passengers: 0 26 27 
+
+1248	1572	2100
+tour: 0 5 2 6 9 7 1 3 8 4 0 
+bonus: 6 9 7 4 
+passengers: 0 27 7 6 
+
+1265	1608	2484
+tour: 0 8 9 7 1 3 4 5 2 6 0 
+bonus: 3 4 5 2 6 
+passengers: 4 1 3 5 2 26 27 
+
+1135	1696	2326
+tour: 0 5 2 9 7 1 3 4 8 6 0 
+bonus: 3 4 8 6 
+passengers: 0 22 27 
+
+948.833	1881	2484
+tour: 0 6 4 5 2 3 8 9 7 1 0 
+bonus: 6 4 5 2 3 
+passengers: 26 27 
+

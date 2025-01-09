@@ -1,0 +1,62 @@
+Fo(cost)	Fo(time)	Fo(bonus)
+
+1677.5	1442	5037
+tour: 0 7 5 3 6 1 4 9 2 8 0 
+bonus: 7 5 3 6 1 4 8 
+passengers: 6 
+
+1816	1532	6548
+tour: 0 3 6 1 4 5 7 9 2 8 0 
+bonus: 3 6 1 4 5 7 9 2 8 
+passengers: 
+
+1666	1585	5754
+tour: 0 1 4 5 3 6 7 9 2 8 0 
+bonus: 1 5 3 6 7 9 2 8 
+passengers: 4 2 3 
+
+1441.33	1608	4785
+tour: 0 6 3 1 4 5 7 9 2 8 0 
+bonus: 6 3 5 7 9 2 8 
+passengers: 13 14 
+
+1564	1652	5754
+tour: 0 1 4 5 7 9 2 3 6 8 0 
+bonus: 1 5 7 9 2 3 6 8 
+passengers: 4 2 3 8 10 9 
+
+1463	1735	5754
+tour: 0 1 4 5 3 2 7 9 6 8 0 
+bonus: 1 5 3 2 7 9 6 8 
+passengers: 4 2 3 
+
+1443	1754	5754
+tour: 0 1 4 5 3 2 6 8 7 9 0 
+bonus: 1 5 3 2 6 8 7 9 
+passengers: 4 2 3 
+
+1414	1861	6548
+tour: 0 1 3 5 7 4 9 2 6 8 0 
+bonus: 1 3 5 7 4 9 2 6 8 
+passengers: 4 3 5 
+
+1314	1934	6548
+tour: 0 1 3 2 4 5 7 9 6 8 0 
+bonus: 1 3 2 4 5 7 9 6 8 
+passengers: 4 3 5 6 14 
+
+1294	1954	6548
+tour: 0 1 3 2 6 8 4 5 7 9 0 
+bonus: 1 3 2 6 8 4 5 7 9 
+passengers: 4 3 5 6 
+
+1265	2010	6548
+tour: 0 1 3 5 7 9 2 4 6 8 0 
+bonus: 1 3 5 7 9 2 4 6 8 
+passengers: 4 3 5 
+
+1164	2112	6548
+tour: 0 1 3 2 4 6 8 5 7 9 0 
+bonus: 1 3 2 4 6 8 5 7 9 
+passengers: 4 3 5 6 14 
+

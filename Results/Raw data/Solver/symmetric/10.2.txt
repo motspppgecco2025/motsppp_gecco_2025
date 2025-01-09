@@ -1,0 +1,592 @@
+Fo(cost)	Fo(time)	Fo(bonus)
+
+986.25	1660	6015
+tour: 0 3 4 9 2 6 5 1 7 8 0 
+bonus: 3 4 9 2 6 5 1 7 8 
+passengers: 0 2 13 17 18 
+
+965.583	1735	6015
+tour: 0 3 4 1 2 9 8 7 5 6 0 
+bonus: 3 4 1 2 9 8 7 5 6 
+passengers: 0 2 6 12 17 18 
+
+954.167	1758	6015
+tour: 0 8 7 4 1 2 6 5 9 3 0 
+bonus: 8 7 4 1 2 6 5 9 3 
+passengers: 2 6 17 18 
+
+1061.58	1652	6015
+tour: 0 3 4 1 2 6 5 9 7 8 0 
+bonus: 3 4 1 2 6 5 9 7 8 
+passengers: 0 2 7 12 17 18 
+
+908.583	1805	6015
+tour: 0 3 4 6 2 9 8 7 1 5 0 
+bonus: 3 4 6 2 9 8 7 1 5 
+passengers: 0 2 12 17 18 
+
+888.667	1836	6015
+tour: 0 7 1 5 6 3 8 4 9 2 0 
+bonus: 7 1 5 6 3 8 4 9 2 
+passengers: 3 5 11 12 17 18 
+
+886.667	1839	6015
+tour: 0 7 1 5 3 8 4 9 2 6 0 
+bonus: 7 1 5 3 8 4 9 2 6 
+passengers: 3 5 11 12 17 18 
+
+1115.25	1611	6015
+tour: 0 3 4 9 2 5 6 1 7 8 0 
+bonus: 3 4 9 2 5 6 1 7 8 
+passengers: 0 2 12 17 18 
+
+843.583	1913	6015
+tour: 0 8 7 4 9 2 3 1 5 6 0 
+bonus: 8 7 4 9 2 3 1 5 6 
+passengers: 2 8 9 10 15 17 18 
+
+1164.58	1605	6015
+tour: 0 3 4 1 2 5 6 9 7 8 0 
+bonus: 3 4 1 2 5 6 9 7 8 
+passengers: 0 2 6 12 17 18 
+
+1324.92	1601	6015
+tour: 0 3 4 5 6 1 2 9 7 8 0 
+bonus: 3 4 5 6 1 2 9 7 8 
+passengers: 0 2 6 7 13 
+
+802.167	1512	5688
+tour: 0 8 7 4 1 2 6 5 3 0 
+bonus: 8 7 4 1 2 6 5 3 
+passengers: 2 6 17 18 
+
+909.583	1431	5688
+tour: 0 3 4 1 2 6 5 7 8 0 
+bonus: 3 4 1 2 6 5 7 8 
+passengers: 0 2 7 11 17 18 
+
+859.25	1500	5688
+tour: 0 8 4 7 5 1 6 2 3 0 
+bonus: 8 4 7 5 1 6 2 3 
+passengers: 0 2 6 7 8 9 10 
+
+899.583	1481	5688
+tour: 0 3 4 6 2 5 1 7 8 0 
+bonus: 3 4 6 2 5 1 7 8 
+passengers: 0 2 11 17 18 
+
+784.583	1626	5688
+tour: 0 7 1 6 2 3 8 4 5 0 
+bonus: 7 1 6 2 3 8 4 5 
+passengers: 3 5 6 7 8 9 10 11 12 
+
+754	1657	5688
+tour: 0 7 1 5 3 8 4 6 2 0 
+bonus: 7 1 5 3 8 4 6 2 
+passengers: 3 5 11 12 17 18 
+
+1006.67	1414	5688
+tour: 0 3 8 4 7 1 2 5 6 0 
+bonus: 3 8 4 7 1 2 5 6 
+passengers: 6 7 11 12 
+
+995.917	1429	5688
+tour: 0 3 4 8 7 1 2 6 5 0 
+bonus: 3 4 8 7 1 2 6 5 
+passengers: 0 2 6 7 11 
+
+1042.92	1409	5688
+tour: 0 3 4 8 7 1 2 5 6 0 
+bonus: 3 4 8 7 1 2 5 6 
+passengers: 0 2 6 7 13 
+
+709.917	1754	5688
+tour: 0 8 7 4 6 2 3 1 5 0 
+bonus: 8 7 4 6 2 3 1 5 
+passengers: 2 8 9 10 15 17 18 
+
+1118.92	1408	5688
+tour: 0 3 4 7 1 2 5 6 8 0 
+bonus: 3 4 7 1 2 5 6 8 
+passengers: 0 2 6 7 13 
+
+695	1382	5335
+tour: 0 7 4 1 2 6 5 3 0 
+bonus: 7 4 1 2 6 5 3 
+passengers: 0 2 6 17 18 
+
+755.917	1322	5335
+tour: 0 3 4 7 1 6 2 5 0 
+bonus: 3 4 7 1 6 2 5 
+passengers: 0 2 6 7 11 
+
+785.917	1299	5335
+tour: 0 3 4 7 1 2 6 5 0 
+bonus: 3 4 7 1 2 6 5 
+passengers: 0 2 6 7 12 
+
+832.917	1279	5335
+tour: 0 3 4 7 1 2 5 6 0 
+bonus: 3 4 7 1 2 5 6 
+passengers: 0 2 6 7 13 
+
+686.167	1491	5335
+tour: 0 7 1 6 2 3 4 5 0 
+bonus: 7 1 6 2 3 4 5 
+passengers: 3 5 6 7 8 9 10 11 12 13 
+
+655.583	1522	5335
+tour: 0 7 1 5 3 4 6 2 0 
+bonus: 7 1 5 3 4 6 2 
+passengers: 3 5 11 12 13 17 18 
+
+602.75	1624	5335
+tour: 0 7 4 6 2 3 1 5 0 
+bonus: 7 4 6 2 3 1 5 
+passengers: 0 2 8 9 10 15 17 18 
+
+706.333	1367	5211
+tour: 0 3 8 4 1 2 6 5 0 
+bonus: 3 8 4 1 2 6 5 
+passengers: 6 11 12 17 18 
+
+753.333	1347	5211
+tour: 0 3 8 4 1 2 5 6 0 
+bonus: 3 8 4 1 2 5 6 
+passengers: 7 11 12 17 18 
+
+626.417	1609	5211
+tour: 0 8 4 6 2 3 1 5 0 
+bonus: 8 4 6 2 3 1 5 
+passengers: 0 2 8 9 10 15 17 18 
+
+683.583	1458	5185
+tour: 0 3 4 1 2 9 5 6 0 
+bonus: 3 4 1 2 9 5 6 
+passengers: 0 2 6 12 17 18 
+
+968	1262	5036
+tour: 0 1 2 6 5 7 8 3 0 
+bonus: 1 2 6 5 7 8 3 
+passengers: 3 4 5 6 7 
+
+999.667	1243	5036
+tour: 0 7 1 2 5 6 8 3 0 
+bonus: 7 1 2 5 6 8 3 
+passengers: 3 5 6 7 
+
+734.167	1353	4944
+tour: 0 8 7 4 1 2 5 3 0 
+bonus: 8 7 4 1 2 5 3 
+passengers: 2 7 17 18 
+
+841.583	1272	4944
+tour: 0 3 4 1 2 5 7 8 0 
+bonus: 3 4 1 2 5 7 8 
+passengers: 0 2 6 11 17 18 
+
+927.917	1270	4944
+tour: 0 3 4 8 7 1 2 5 0 
+bonus: 3 4 8 7 1 2 5 
+passengers: 0 2 6 7 12 
+
+649.25	1597	4944
+tour: 0 8 7 4 2 3 1 5 0 
+bonus: 8 7 4 2 3 1 5 
+passengers: 2 8 9 10 15 16 17 18 
+
+602.75	1340	4918
+tour: 0 8 7 4 1 6 2 3 0 
+bonus: 8 7 4 1 6 2 3 
+passengers: 2 6 7 8 9 10 
+
+685.25	1262	4918
+tour: 0 8 4 7 1 6 2 3 0 
+bonus: 8 4 7 1 6 2 3 
+passengers: 0 2 6 7 8 9 10 
+
+808.583	1239	4918
+tour: 0 3 4 6 2 1 7 8 0 
+bonus: 3 4 6 2 1 7 8 
+passengers: 0 2 13 17 18 
+
+792.917	1259	4918
+tour: 0 3 4 8 7 1 6 2 0 
+bonus: 3 4 8 7 1 6 2 
+passengers: 0 2 6 7 12 
+
+944.917	1238	4918
+tour: 0 3 4 7 1 2 6 8 0 
+bonus: 3 4 7 1 2 6 8 
+passengers: 0 2 6 7 11 
+
+532.583	1232	4858
+tour: 0 3 4 1 2 6 5 0 
+bonus: 3 4 1 2 6 5 
+passengers: 0 2 7 12 17 18 
+
+579.583	1212	4858
+tour: 0 3 4 1 2 5 6 0 
+bonus: 3 4 1 2 5 6 
+passengers: 0 2 6 13 17 18 
+
+910.917	1208	4858
+tour: 0 3 4 6 5 2 1 0 
+bonus: 3 4 6 5 2 1 
+passengers: 0 2 12 
+
+524.917	1605	4858
+tour: 0 4 6 2 3 1 5 0 
+bonus: 4 6 2 3 1 5 
+passengers: 0 1 2 8 9 10 15 17 18 
+
+635.667	1157	4683
+tour: 0 7 1 6 2 5 3 0 
+bonus: 7 1 6 2 5 3 
+passengers: 3 5 6 7 
+
+611.917	1181	4683
+tour: 0 7 1 5 6 2 3 0 
+bonus: 7 1 5 6 2 3 
+passengers: 3 5 8 9 10 
+
+665.667	1134	4683
+tour: 0 7 1 2 6 5 3 0 
+bonus: 7 1 2 6 5 3 
+passengers: 3 5 6 7 
+
+740.917	1132	4683
+tour: 0 7 1 6 5 2 3 0 
+bonus: 7 1 6 5 2 3 
+passengers: 3 5 8 9 10 
+
+949.25	1128	4683
+tour: 0 7 5 6 1 2 3 0 
+bonus: 7 5 6 1 2 3 
+passengers: 6 7 8 9 10 
+
+495.583	1210	4565
+tour: 0 7 4 1 6 2 3 0 
+bonus: 7 4 1 6 2 3 
+passengers: 0 2 6 7 8 9 10 
+
+582.917	1129	4565
+tour: 0 3 4 7 1 6 2 0 
+bonus: 3 4 7 1 6 2 
+passengers: 0 2 6 7 11 
+
+658.917	1109	4565
+tour: 0 3 4 7 1 2 6 0 
+bonus: 3 4 7 1 2 6 
+passengers: 0 2 6 7 13 
+
+519.25	1195	4441
+tour: 0 8 4 1 6 2 3 0 
+bonus: 8 4 1 6 2 3 
+passengers: 0 2 6 7 8 9 10 
+
+579.333	1177	4441
+tour: 0 3 8 4 1 2 6 0 
+bonus: 3 8 4 1 2 6 
+passengers: 6 11 12 17 18 
+
+900	1103	4292
+tour: 0 1 2 5 7 8 3 0 
+bonus: 1 2 5 7 8 3 
+passengers: 3 4 5 6 7 
+
+705.25	1092	4266
+tour: 0 8 7 1 6 2 3 0 
+bonus: 8 7 1 6 2 3 
+passengers: 6 7 8 9 10 
+
+825.667	1073	4266
+tour: 0 7 1 2 6 8 3 0 
+bonus: 7 1 2 6 8 3 
+passengers: 3 5 6 7 
+
+502.25	1131	4206
+tour: 0 5 1 6 2 3 0 
+bonus: 5 1 6 2 3 
+passengers: 6 7 8 9 10 
+
+560	1086	4206
+tour: 0 1 6 2 5 3 0 
+bonus: 1 6 2 5 3 
+passengers: 3 4 5 6 7 
+
+536.25	1110	4206
+tour: 0 1 5 6 2 3 0 
+bonus: 1 5 6 2 3 
+passengers: 3 4 5 8 9 10 
+
+590	1063	4206
+tour: 0 1 2 6 5 3 0 
+bonus: 1 2 6 5 3 
+passengers: 3 4 5 6 7 
+
+661.25	1059	4206
+tour: 0 5 6 1 2 3 0 
+bonus: 5 6 1 2 3 
+passengers: 6 7 8 9 10 
+
+483.25	1255	4206
+tour: 0 1 6 2 3 5 0 
+bonus: 1 6 2 3 5 
+passengers: 3 4 5 6 7 8 9 10 
+
+477.417	1158	4174
+tour: 0 8 7 4 1 2 3 0 
+bonus: 8 7 4 1 2 3 
+passengers: 2 7 8 9 10 17 18 
+
+464.583	1073	4114
+tour: 0 3 4 1 2 5 0 
+bonus: 3 4 1 2 5 
+passengers: 0 2 6 12 17 18 
+
+405.583	1042	4088
+tour: 0 3 4 1 2 6 0 
+bonus: 3 4 1 2 6 
+passengers: 0 2 6 11 17 18 
+
+535.583	1038	4088
+tour: 0 3 4 6 2 1 0 
+bonus: 3 4 6 2 1 
+passengers: 0 2 12 17 18 
+
+650.917	1036	4088
+tour: 0 3 4 6 1 2 0 
+bonus: 3 4 6 1 2 
+passengers: 0 2 6 7 12 
+
+688.917	1035	4030
+tour: 0 3 4 6 5 2 0 
+bonus: 3 4 6 5 2 
+passengers: 0 2 13 
+
+543.917	1022	3939
+tour: 0 7 1 5 2 3 0 
+bonus: 7 1 5 2 3 
+passengers: 3 5 8 9 10 
+
+597.667	975	3939
+tour: 0 7 1 2 5 3 0 
+bonus: 7 1 2 5 3 
+passengers: 3 5 6 7 
+
+378.917	962	3913
+tour: 0 7 1 6 2 3 0 
+bonus: 7 1 6 2 3 
+passengers: 3 5 6 7 8 9 10 
+
+813.25	957	3855
+tour: 0 7 5 6 2 3 0 
+bonus: 7 5 6 2 3 
+passengers: 8 9 10 
+
+370.25	1028	3821
+tour: 0 7 4 1 2 3 0 
+bonus: 7 4 1 2 3 
+passengers: 0 2 7 8 9 10 17 18 
+
+544.917	947	3821
+tour: 0 3 4 7 1 2 0 
+bonus: 3 4 7 1 2 
+passengers: 0 2 6 7 12 
+
+667.25	910	3522
+tour: 0 8 7 1 2 3 0 
+bonus: 8 7 1 2 3 
+passengers: 6 7 8 9 10 
+
+464.25	949	3462
+tour: 0 5 1 2 3 0 
+bonus: 5 1 2 3 
+passengers: 6 7 8 9 10 
+
+522	904	3462
+tour: 0 1 2 5 3 0 
+bonus: 1 2 5 3 
+passengers: 3 4 5 6 7 
+
+303.25	891	3436
+tour: 0 1 6 2 3 0 
+bonus: 1 6 2 3 
+passengers: 3 4 5 6 7 8 9 10 
+
+378.25	869	3436
+tour: 0 6 1 2 3 0 
+bonus: 6 1 2 3 
+passengers: 5 6 7 8 9 10 
+
+572.25	868	3378
+tour: 0 6 5 2 3 0 
+bonus: 6 5 2 3 
+passengers: 8 9 10 
+
+291.583	880	3344
+tour: 0 3 4 1 2 0 
+bonus: 3 4 1 2 
+passengers: 0 2 7 11 17 18 
+
+313.583	865	3260
+tour: 0 3 4 6 2 0 
+bonus: 3 4 6 2 
+passengers: 0 2 13 17 18 
+
+340.917	780	3169
+tour: 0 7 1 2 3 0 
+bonus: 7 1 2 3 
+passengers: 3 5 6 7 8 9 10 
+
+330.667	797	2994
+tour: 0 7 1 6 2 0 
+bonus: 7 1 6 2 
+passengers: 3 5 6 7 
+
+406.667	777	2994
+tour: 0 7 1 2 6 0 
+bonus: 7 1 2 6 
+passengers: 3 5 6 7 
+
+322	863	2902
+tour: 0 7 4 1 2 0 
+bonus: 7 4 1 2 
+passengers: 0 2 7 17 18 
+
+265.25	709	2692
+tour: 0 1 2 3 0 
+bonus: 1 2 3 
+passengers: 3 4 5 6 7 8 9 10 
+
+398.25	698	2608
+tour: 0 6 2 3 0 
+bonus: 6 2 3 
+passengers: 8 9 10 
+
+255	726	2517
+tour: 0 1 6 2 0 
+bonus: 1 6 2 
+passengers: 3 4 5 6 7 
+
+330	704	2517
+tour: 0 6 1 2 0 
+bonus: 6 1 2 
+passengers: 5 6 7 
+
+252.917	708	2516
+tour: 0 3 4 2 0 
+bonus: 3 4 2 
+passengers: 0 2 13 16 17 18 
+
+244.167	844	2425
+tour: 0 4 1 2 0 
+bonus: 4 1 2 
+passengers: 0 1 2 7 17 18 
+
+292.667	615	2250
+tour: 0 7 1 2 0 
+bonus: 7 1 2 
+passengers: 3 5 6 7 
+
+283.333	691	2074
+tour: 0 7 4 2 0 
+bonus: 7 4 2 
+passengers: 0 2 16 17 18 
+
+467.333	585	2048
+tour: 0 7 4 3 0 
+bonus: 7 4 3 
+passengers: 0 2 
+
+491	570	1924
+tour: 0 8 4 3 0 
+bonus: 8 4 3 
+passengers: 0 2 
+
+284.25	536	1864
+tour: 0 2 3 0 
+bonus: 2 3 
+passengers: 8 9 10 
+
+243.5	668	1864
+tour: 0 3 4 2 0 
+bonus: 3 2 
+passengers: 0 1 2 16 17 18 
+
+265.25	662	1864
+tour: 0 1 2 3 0 
+bonus: 2 3 
+passengers: 3 4 5 6 7 8 9 10 
+
+217	544	1773
+tour: 0 1 2 0 
+bonus: 1 2 
+passengers: 3 4 5 6 7 
+
+350	533	1689
+tour: 0 6 2 0 
+bonus: 6 2 
+passengers: 
+
+205.5	672	1597
+tour: 0 4 2 0 
+bonus: 4 2 
+passengers: 0 1 2 16 17 18 
+
+589	440	1396
+tour: 0 7 3 0 
+bonus: 7 3 
+passengers: 
+
+290.667	474	1305
+tour: 0 7 1 0 
+bonus: 7 1 
+passengers: 3 5 
+
+539	405	1272
+tour: 0 3 8 0 
+bonus: 3 8 
+passengers: 
+
+236	371	945
+tour: 0 2 0 
+bonus: 2 
+passengers: 
+
+217	497	945
+tour: 0 1 2 0 
+bonus: 2 
+passengers: 3 4 5 6 7 
+
+205.5	632	945
+tour: 0 4 2 0 
+bonus: 2 
+passengers: 0 1 2 16 17 18 
+
+226	224	919
+tour: 0 3 0 
+bonus: 3 
+passengers: 
+
+215	403	828
+tour: 0 1 0 
+bonus: 1 
+passengers: 3 4 5 
+
+226	200	0
+tour: 0 3 0 
+bonus: 
+passengers: 
+
+215	356	0
+tour: 0 1 0 
+bonus: 
+passengers: 3 4 5 
+
+205.5	607	0
+tour: 0 4 2 0 
+bonus: 
+passengers: 0 1 2 16 17 18 
+

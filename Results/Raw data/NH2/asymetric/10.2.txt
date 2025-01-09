@@ -1,0 +1,27 @@
+Fo(cost)	Fo(time)	Fo(bonus)
+
+1403	1559	5375
+tour: 0 2 6 9 4 1 5 8 3 7 0 
+bonus: 2 6 9 4 1 5 8 3 7 
+passengers: 
+
+1223.33	1613	4223
+tour: 0 2 6 1 5 9 4 8 3 7 0 
+bonus: 2 6 1 4 8 3 7 
+passengers: 7 5 
+
+1321	1709	5375
+tour: 0 4 1 5 2 6 9 8 3 7 0 
+bonus: 4 1 5 2 6 9 8 3 7 
+passengers: 
+
+1272	1730	5375
+tour: 0 4 9 1 5 8 2 6 3 7 0 
+bonus: 4 9 1 5 8 2 6 3 7 
+passengers: 3 4 
+
+1171	1880	5375
+tour: 0 8 4 9 1 5 2 6 3 7 0 
+bonus: 8 4 9 1 5 2 6 3 7 
+passengers: 
+

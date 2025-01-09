@@ -1,0 +1,62 @@
+Fo(cost)	Fo(time)	Fo(bonus)
+
+778.333	983	3122
+tour: 0 2 1 3 4 0 
+bonus: 2 1 3 4 
+passengers: 2 9 
+
+754.333	1022	3122
+tour: 0 2 4 1 3 0 
+bonus: 2 4 1 3 
+passengers: 2 9 
+
+837.333	963	3122
+tour: 0 2 4 3 1 0 
+bonus: 2 4 3 1 
+passengers: 2 9 
+
+538.333	749	2455
+tour: 0 2 4 3 0 
+bonus: 2 4 3 
+passengers: 2 9 
+
+454.333	712	1752
+tour: 0 2 3 0 
+bonus: 2 3 
+passengers: 2 9 
+
+619	660	1752
+tour: 0 3 2 0 
+bonus: 3 2 
+passengers: 
+
+365.333	601	1617
+tour: 0 2 4 0 
+bonus: 2 4 
+passengers: 2 9 
+
+493	526	1541
+tour: 0 3 4 0 
+bonus: 3 4 
+passengers: 
+
+317.333	453	914
+tour: 0 2 0 
+bonus: 2 
+passengers: 2 9 
+
+350	378	838
+tour: 0 3 0 
+bonus: 3 
+passengers: 
+
+350	347	0
+tour: 0 3 0 
+bonus: 
+passengers: 
+
+297.5	416	0
+tour: 0 2 0 
+bonus: 
+passengers: 2 6 10 
+

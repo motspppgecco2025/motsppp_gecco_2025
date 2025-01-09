@@ -1,0 +1,37 @@
+Fo(cost)	Fo(time)	Fo(bonus)
+
+861	1306	4160
+tour: 0 2 1 7 4 5 3 6 0 
+bonus: 2 1 7 4 5 3 
+passengers: 20 15 14 
+
+845	1347	4160
+tour: 0 2 1 4 7 5 3 6 0 
+bonus: 2 1 4 7 5 3 
+passengers: 20 15 14 
+
+1048	1412	4754
+tour: 0 6 3 5 2 1 4 7 0 
+bonus: 6 3 5 2 1 4 7 
+passengers: 
+
+1046	1462	4754
+tour: 0 6 3 2 5 1 4 7 0 
+bonus: 6 3 2 5 1 4 7 
+passengers: 
+
+976	1472	4754
+tour: 0 1 7 4 5 2 3 6 0 
+bonus: 1 7 4 5 2 3 6 
+passengers: 
+
+960	1513	4754
+tour: 0 1 4 7 5 2 3 6 0 
+bonus: 1 4 7 5 2 3 6 
+passengers: 
+
+679	1553	2588
+tour: 0 2 5 6 3 7 4 1 0 
+bonus: 6 3 4 1 
+passengers: 4 20 15 14 23 25 26 
+

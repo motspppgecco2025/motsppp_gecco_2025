@@ -1,0 +1,17 @@
+Fo(cost)	Fo(time)	Fo(bonus)
+
+  1403	1559	5375
+tour: 0 2 6 9 4 1 5 8 3 7 0 
+bonus: 2 6 9 4 1 5 8 3 7 
+passengers: 
+
+  1261	1661	5375
+tour: 0 2 6 1 5 9 4 8 3 7 0 
+bonus: 2 6 1 5 9 4 8 3 7 
+passengers: 5 
+
+  1171	1880	5375
+tour: 0 8 4 9 1 5 2 6 3 7 0 
+bonus: 8 4 9 1 5 2 6 3 7 
+passengers: 
+

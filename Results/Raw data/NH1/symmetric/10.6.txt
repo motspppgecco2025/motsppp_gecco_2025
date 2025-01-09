@@ -1,0 +1,52 @@
+Fo(cost)	Fo(time)	Fo(bonus)
+
+  1942	1550	6489
+tour: 0 3 4 7 8 5 1 6 9 2 0 
+bonus: 3 4 7 8 5 1 6 9 2 
+passengers: 
+
+  1868	1573	6489
+tour: 0 2 1 5 9 6 4 7 8 3 0 
+bonus: 2 1 5 9 6 4 7 8 3 
+passengers: 8 7 5 
+
+  1794	1594	6489
+tour: 0 2 1 6 9 5 8 7 4 3 0 
+bonus: 2 1 6 9 5 8 7 4 3 
+passengers: 8 7 5 
+
+  1792	1599	6489
+tour: 0 3 4 7 8 2 1 5 9 6 0 
+bonus: 3 4 7 8 2 1 5 9 6 
+passengers: 
+
+1620.4	1617	6489
+tour: 0 7 4 3 8 5 9 6 1 2 0 
+bonus: 7 4 3 8 5 9 6 1 2 
+passengers: 11 10 9 12 
+
+1438.4	1696	6489
+tour: 0 6 3 4 7 8 9 5 1 2 0 
+bonus: 6 3 4 7 8 9 5 1 2 
+passengers: 11 10 9 12 
+
+  1398	1970	6489
+tour: 0 1 7 4 2 5 9 8 3 6 0 
+bonus: 1 7 4 2 5 9 8 3 6 
+passengers: 8 7 6 5 
+
+  1380	1974	6489
+tour: 0 6 3 1 4 7 8 9 5 2 0 
+bonus: 6 3 1 4 7 8 9 5 2 
+passengers: 
+
+  1372	2000	6489
+tour: 0 6 3 1 4 7 5 9 8 2 0 
+bonus: 6 3 1 4 7 5 9 8 2 
+passengers: 
+
+1249.5	2073	6489
+tour: 0 1 7 4 8 9 5 2 3 6 0 
+bonus: 1 7 4 8 9 5 2 3 6 
+passengers: 8 7 6 5 16 18 17 15 14 
+

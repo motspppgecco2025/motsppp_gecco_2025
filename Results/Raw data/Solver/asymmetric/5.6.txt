@@ -1,0 +1,127 @@
+Fo(cost)	Fo(time)	Fo(bonus)
+
+770	847	2513
+tour: 0 1 2 3 4 0 
+bonus: 1 2 3 4 
+passengers: 
+
+779.667	846	2513
+tour: 0 1 4 2 3 0 
+bonus: 1 4 2 3 
+passengers: 35 48 
+
+723.667	933	2513
+tour: 0 2 3 1 4 0 
+bonus: 2 3 1 4 
+passengers: 35 48 
+
+685.667	992	2513
+tour: 0 2 1 4 3 0 
+bonus: 2 1 4 3 
+passengers: 35 48 
+
+945.4	843	2513
+tour: 0 4 2 1 3 0 
+bonus: 4 2 1 3 
+passengers: 1 9 12 20 
+
+691	587	2040
+tour: 0 1 2 3 0 
+bonus: 1 2 3 
+passengers: 
+
+667	765	2040
+tour: 0 2 3 1 0 
+bonus: 2 3 1 
+passengers: 
+
+520.667	770	2004
+tour: 0 1 4 3 0 
+bonus: 1 4 3 
+passengers: 35 48 
+
+531.667	750	1922
+tour: 0 2 1 4 0 
+bonus: 2 1 4 
+passengers: 35 48 
+
+618.667	683	1922
+tour: 0 1 4 2 0 
+bonus: 1 4 2 
+passengers: 35 48 
+
+647.4	652	1573
+tour: 0 4 2 3 0 
+bonus: 4 2 3 
+passengers: 0 1 3 24 
+
+567	743	1573
+tour: 0 2 3 4 0 
+bonus: 2 3 4 
+passengers: 
+
+621	452	1531
+tour: 0 1 3 0 
+bonus: 1 3 
+passengers: 
+
+502.8	736	1531
+tour: 0 1 4 3 0 
+bonus: 1 3 
+passengers: 36 37 44 53 
+
+598	670	1531
+tour: 0 3 1 0 
+bonus: 3 1 
+passengers: 
+
+530	424	1449
+tour: 0 1 2 0 
+bonus: 1 2 
+passengers: 
+
+475	582	1449
+tour: 0 2 1 0 
+bonus: 2 1 
+passengers: 
+
+366.667	528	1413
+tour: 0 1 4 0 
+bonus: 1 4 
+passengers: 35 48 
+
+488	483	1100
+tour: 0 2 3 0 
+bonus: 2 3 
+passengers: 
+
+486.4	489	982
+tour: 0 4 2 0 
+bonus: 4 2 
+passengers: 2 9 12 20 
+
+310	360	940
+tour: 0 1 0 
+bonus: 1 
+passengers: 
+
+327	320	509
+tour: 0 2 0 
+bonus: 2 
+passengers: 
+
+234.4	334	473
+tour: 0 4 0 
+bonus: 4 
+passengers: 0 1 2 5 
+
+234.4	300	0
+tour: 0 4 0 
+bonus: 
+passengers: 0 1 2 23 
+
+327	299	0
+tour: 0 2 0 
+bonus: 
+passengers: 
+

@@ -1,0 +1,97 @@
+Fo(cost)	Fo(time)	Fo(bonus)
+
+589.3	1075	2171
+tour: 0 1 2 3 4 0 
+bonus: 1 2 3 4 
+passengers: 28 29 30 34 39 41 46 
+
+641.3	1036	2171
+tour: 0 1 2 4 3 0 
+bonus: 1 2 4 3 
+passengers: 28 29 30 34 39 41 46 
+
+767.8	933	2171
+tour: 0 3 4 1 2 0 
+bonus: 3 4 1 2 
+passengers: 34 39 41 46 
+
+552.8	867	1864
+tour: 0 2 3 4 0 
+bonus: 2 3 4 
+passengers: 6 11 15 26 
+
+460.3	970	1864
+tour: 0 1 2 4 0 
+bonus: 1 2 4 
+passengers: 28 29 30 34 39 41 46 
+
+604.8	828	1864
+tour: 0 2 4 3 0 
+bonus: 2 4 3 
+passengers: 5 6 11 19 
+
+541.8	931	1864
+tour: 0 2 4 1 0 
+bonus: 2 4 1 
+passengers: 5 6 11 19 
+
+423.8	762	1557
+tour: 0 2 4 0 
+bonus: 2 4 
+passengers: 5 6 11 19 
+
+551.5	705	1345
+tour: 0 1 4 3 0 
+bonus: 1 4 3 
+passengers: 28 29 30 
+
+281.3	691	1133
+tour: 0 1 2 0 
+bonus: 1 2 
+passengers: 28 29 30 34 39 41 46 
+
+491.8	591	1133
+tour: 0 2 3 0 
+bonus: 2 3 
+passengers: 6 11 15 26 
+
+370.5	639	1038
+tour: 0 1 4 0 
+bonus: 1 4 
+passengers: 28 29 30 
+
+531	536	1038
+tour: 0 4 3 0 
+bonus: 4 3 
+passengers: 
+
+244.8	483	826
+tour: 0 2 0 
+bonus: 2 
+passengers: 5 6 11 19 
+
+350	470	731
+tour: 0 4 0 
+bonus: 4 
+passengers: 
+
+162.5	463	307
+tour: 0 1 0 
+bonus: 1 
+passengers: 28 29 30 
+
+470	260	307
+tour: 0 3 0 
+bonus: 3 
+passengers: 
+
+156	430	0
+tour: 0 1 0 
+bonus: 
+passengers: 28 29 30 33 
+
+470	228	0
+tour: 0 3 0 
+bonus: 
+passengers: 
+

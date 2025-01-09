@@ -1,0 +1,17 @@
+Fo(cost)	Fo(time)	Fo(bonus)
+
+   861	1345	4754
+tour: 0 2 1 7 4 5 3 6 0 
+bonus: 2 1 7 4 5 3 6 
+passengers: 15 14 10 
+
+   845	1386	4754
+tour: 0 2 1 4 7 5 3 6 0 
+bonus: 2 1 4 7 5 3 6 
+passengers: 15 14 10 
+
+   645	1645	4754
+tour: 0 2 5 6 3 7 4 1 0 
+bonus: 2 5 6 3 7 4 1 
+passengers: 20 15 14 23 26 24 
+
